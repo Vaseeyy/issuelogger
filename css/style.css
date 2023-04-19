@@ -363,3 +363,12 @@ body {
     display: none;
   }
 }
+
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: single bold black;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
