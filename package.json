@@ -7,7 +7,9 @@
     "sass:prod": "sass --style=compressed --no-source-map style.scss:css/style.css"
   },
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
   "devDependencies": {
     "sass": "^1.57.1"
   }
