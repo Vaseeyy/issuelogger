@@ -255,7 +255,18 @@
     </div>
   </div>
   <footer id="footer" class="footer container">
-    
+    <!-- Project 11 contact form -->
+    <div class="form-container">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Contact me!</h3>
+        <input type="text" id="name" placeholder="Your name here" required>
+        <input type="email" id="email" placeholder="Your email here" required>
+        <input type="text" id="phone" placeholder="Your phone number here">
+        <textarea id="message" rows="4" placeholder="Your message here"></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+    <!-- project 11 contact form end -->
     <div class="footer__content">
       &copy; 2023 IssueLogger. All rights reserved.
     </div>
@@ -269,5 +280,24 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
   ></script>
   <script type="module" src="./main.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "vasey1996@gmail.com",
+        Password : "password",
+        To : 'karladamvasey@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact enquiry",
+        Body : "Name: " + document.getElementById("name").value +
+        "<br> Email: " + document.getElementById("email").value + 
+        "<br> Phone number: " + document.getElementById("phone").value +
+        "<br> Message: " + document.getElementById("message").value +          
+        }).then(
+          message => alert("Message sent successfully!")
+        );
+    }
+  </script>
 </body>
 </html>
