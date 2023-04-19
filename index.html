@@ -284,16 +284,16 @@
   <script>
     function sendEmail(){
         Email.send({
-        Host : "smtp.gmail.com",
-        Username : "vasey1996@gmail.com",
-        Password : "password",
-        To : 'karladamvasey@gmail.com',
+        Host : "smtp25.elasticemail.com",
+        Username : "contactkarlvasey@gmail.com",
+        Password : "329A64D55E77B00AB6804D072532B797A272",
+        To : 'contactkarlvasey@gmail.com',
         From : document.getElementById("email").value,
         Subject : "New Contact enquiry",
         Body : "Name: " + document.getElementById("name").value +
         "<br> Email: " + document.getElementById("email").value + 
         "<br> Phone number: " + document.getElementById("phone").value +
-        "<br> Message: " + document.getElementById("message").value +          
+        "<br> Message: " + document.getElementById("message").value          
         }).then(
           message => alert("Message sent successfully!")
         );
