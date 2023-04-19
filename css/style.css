@@ -372,3 +372,18 @@ body {
   font-size: 18px;
   margin-bottom: 15px;
 }
+
+input {
+  height: 45px;
+
+}
+
+form .submit {
+  background: green;
+  border-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  margin-top: 15px;
+}
